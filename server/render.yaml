@@ -1,0 +1,13 @@
+services:
+  - type: web
+    name: mern-backend
+    env: node
+    buildCommand: npm install
+    startCommand: node server.js
+    envVars:
+      - key: MONGODB_URI
+        fromDatabase:
+          name: mern-db
+          property: connectionString
+      - key: JWT_SECRET
+        generateValue: true

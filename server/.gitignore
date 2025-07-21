@@ -1,0 +1,31 @@
+
+# Node
+node_modules/
+npm-debug.log
+
+# Environment variables
+.env
+*.env
+
+# Build
+client/build/
+server/logs/
+
+# IDE
+.vscode/
+.idea/
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Debug
+*.log
+
+# Coverage
+coverage/
+
+# Production
+*.pid
+*.seed
+EOL

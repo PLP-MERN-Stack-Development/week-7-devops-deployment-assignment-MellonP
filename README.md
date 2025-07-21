@@ -1,78 +1,148 @@
-[![Open in Visual Studio Code](https://classroom.github.com/assets/open-in-vscode-2e0aaae1b6195c2367325f4f02e2d04e9abb55f0b24a779b69b11b9e10269abc.svg)](https://classroom.github.com/online_ide?assignment_repo_id=19956339&assignment_repo_type=AssignmentRepo)
-# Deployment and DevOps for MERN Applications
 
-This assignment focuses on deploying a full MERN stack application to production, implementing CI/CD pipelines, and setting up monitoring for your application.
+# 🐞 MERN Bug Tracker
 
-## Assignment Overview
+A full-stack Bug Tracker app built with the MERN stack (MongoDB, Express, React, Node.js). This app allows users to report, view, update, and delete bugs in a project—ideal for development teams managing issues collaboratively.
 
-You will:
-1. Prepare your MERN application for production deployment
-2. Deploy the backend to a cloud platform
-3. Deploy the frontend to a static hosting service
-4. Set up CI/CD pipelines with GitHub Actions
-5. Implement monitoring and maintenance strategies
+---
 
-## Getting Started
+## 🚀 Features
 
-1. Accept the GitHub Classroom assignment invitation
-2. Clone your personal repository that was created by GitHub Classroom
-3. Follow the setup instructions in the `Week7-Assignment.md` file
-4. Use the provided templates and configuration files as a starting point
+* Create, read, update, delete (CRUD) bug reports
+* Real-time project tracking (with project & reporter fields)
+* MongoDB for persistent data storage
+* RESTful API architecture
+* Frontend and backend deployed with CI/CD support
+* Environment-based configuration using `.env`
 
-## Files Included
+---
 
-- `Week7-Assignment.md`: Detailed assignment instructions
-- `.github/workflows/`: GitHub Actions workflow templates
-- `deployment/`: Deployment configuration files and scripts
-- `.env.example`: Example environment variable templates
-- `monitoring/`: Monitoring configuration examples
+## 🧱 Tech Stack
 
-## Requirements
+Frontend: React, Axios, Tailwind CSS
+Backend: Node.js, Express.js
+Database: MongoDB (Mongoose ORM)
+Deployment: Render / Railway / Netlify
+DevOps: Git, GitHub, CI/CD
+Testing: (Optional) Jest / Postman
 
-- A completed MERN stack application from previous weeks
-- Accounts on the following services:
-  - GitHub
-  - MongoDB Atlas
-  - Render, Railway, or Heroku (for backend)
-  - Vercel, Netlify, or GitHub Pages (for frontend)
-- Basic understanding of CI/CD concepts
+---
 
-## Deployment Platforms
+## 🔧 Project Structure
 
-### Backend Deployment Options
-- **Render**: Easy to use, free tier available
-- **Railway**: Developer-friendly, generous free tier
-- **Heroku**: Well-established, extensive documentation
+mern-bug-tracker/
+├── client/             
+├──  ├── public
+ ├── src
+ | ├── components
+ | | ├── pages
+server/               # Express backend
+│   ├── controllers/      # Route handlers
+│   ├── models/           # Mongoose schemas
+│   ├── routes/           # API routes
+│   ├── utils/            # Custom error handling
+│   └── server.js         # Main server entry
+├── .env                  # Environment config
+└── README.md             # You're reading it!
 
-### Frontend Deployment Options
-- **Vercel**: Optimized for React apps, easy integration
-- **Netlify**: Great for static sites, good CI/CD
-- **GitHub Pages**: Free, integrated with GitHub
+---
 
-## CI/CD Pipeline
+## 📦 Installation
 
-The assignment includes templates for setting up GitHub Actions workflows:
-- `frontend-ci.yml`: Tests and builds the React application
-- `backend-ci.yml`: Tests the Express.js backend
-- `frontend-cd.yml`: Deploys the frontend to your chosen platform
-- `backend-cd.yml`: Deploys the backend to your chosen platform
+### 1. Clone the repo
 
-## Submission
+git clone [https://github.com/MellonP/mern-bug-tracker.git](https://github.com/MellonP/mern-bug-tracker.git)
+cd mern-bug-tracker
 
-Your work will be automatically submitted when you push to your GitHub Classroom repository. Make sure to:
+### 2. Setup environment variables
 
-1. Complete all deployment tasks
-2. Set up CI/CD pipelines with GitHub Actions
-3. Deploy both frontend and backend to production
-4. Document your deployment process in the README.md
-5. Include screenshots of your CI/CD pipeline in action
-6. Add URLs to your deployed applications
+Create a `.env` file in `/server/`:
 
-## Resources
+PORT=3001
+MONGODB\_URI=mongodb://localhost:27017/bugtracker
+NODE\_ENV=development
 
-- [GitHub Actions Documentation](https://docs.github.com/en/actions)
-- [MongoDB Atlas Documentation](https://docs.atlas.mongodb.com/)
-- [Render Documentation](https://render.com/docs)
-- [Railway Documentation](https://docs.railway.app/)
-- [Vercel Documentation](https://vercel.com/docs)
-- [Netlify Documentation](https://docs.netlify.com/) 
+### 3. Install dependencies
+
+# Backend
+
+cd server
+npm install
+
+# Frontend
+
+cd ../client
+npm install
+
+---
+
+## 🧪 Running the App
+
+### Development Mode
+
+# Start backend
+
+cd server
+npm run dev
+
+# Start frontend (in separate terminal)
+
+cd client
+npm run dev
+
+---
+
+## 🌐 API Endpoints
+
+| Method | Endpoint       | Description      |
+| ------ | -------------- | ---------------- |
+| GET    | /api/bugs      | Get all bugs     |
+| POST   | /api/bugs      | Create a new bug |
+| GET    | /api/bugs/\:id | Get bug by ID    |
+| PATCH  | /api/bugs/\:id | Update bug by ID |
+| DELETE | /api/bugs/\:id | Delete bug by ID |
+
+### Bug Schema (Sample)
+
+{
+"title": "Bug title",
+"description": "Bug details",
+"status": "open",
+"project": "<projectId>",
+"reporter": "<userId>"
+}
+
+---
+
+## ✅ Deployment
+
+Frontend and backend can be deployed separately.
+
+backend: localhost:27017/mern_deployment
+
+frontend: 
+
+---
+
+## 📸 Screenshots
+
+Bug Dashboard
+Screenshot 2025-07-21 114108.png
+
+
+---
+
+## 👨‍💻 Author
+
+Mellon Pakkies
+Week 7 - MERN Deployment & DevOps Assignment
+GitHub: [https://github.com/MellonP]
+
+---
+
+## 📄 License
+
+MIT License – feel free to fork, contribute, and customize.
+
+---
+
+Let me know if you want me to convert this into a downloadable `.md` file too!
