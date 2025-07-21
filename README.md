@@ -126,7 +126,7 @@ frontend:
 ## 📸 Screenshots
 
 Bug Dashboard
-Screenshot 2025-07-21 114108.png
+/Screenshot%202025-07-21%20114108.png
 
 
 ---
